@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kreator Formularzy – Discord Forms</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper wide">
+    <h1>🛠️ Kreator Formularzy</h1>
+    <p>Dodaj pytania i wygeneruj formularz z linkiem. Odpowiedzi polecą na Twój Discord webhook.</p>
+    <div class="tutorial">
+      <h3>📘 Jak stworzyć formularz?</h3>
+      <ol>
+        <li>Wklej link do swojego Discord Webhooka</li>
+        <li>Dodaj pytania – możesz mieszać tekst, checkboxy i daty</li>
+        <li>Kliknij „Wygeneruj formularz” – dostaniesz link</li>
+        <li>Udostępnij go innym – odpowiedzi wrócą do Ciebie na Discord</li>
+      </ol>
+    </div>
+    <input type="text" id="webhookUrl" placeholder="Wklej tu swój Discord Webhook URL" />
+    <div id="questions"></div>
+    <button onclick="addQuestion()">➕ Dodaj pytanie</button>
+    <button class="generate-btn" onclick="generateForm()">🎉 Wygeneruj formularz</button>
+    <div id="generatedLink" class="generated-link"></div>
+    <footer>
+      <a href="privacy.html">Polityka prywatności</a> · 
+      <a href="terms.html">Regulamin</a> · 
+      <a href="index.html">Strona główna</a>
+    </footer>
+  </div>
+  <script src="scripts/create-form.js"></script>
+</body>
+</html>
